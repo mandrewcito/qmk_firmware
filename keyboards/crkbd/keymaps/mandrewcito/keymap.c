@@ -73,11 +73,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
    /*
    //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-          TAB,      !,       @,       #,       ~,       €,                            ¬,        *,        (,       ),      P,     BSPC,
+          TAB,      !,       @,       #,       ~,       €,                            ¬,       / ,       (,       ),       =,        ,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-         LSFT,      º,       ª ,      <,       ¿,        ¡,                            H,       J,       K,       L,      Ñ,    QUOT,
+         LSFT,      º,       ª ,      <,       ¿,        ¡,                            +,      * ,       [,       ],       ",      ! ,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-         CTRL,       \,       /,      >,       ?,        !,                            N,       M,    ,/; ,    ./: ,    -/_,  KC_ESC,
+         CTRL,       \,       /,      >,       ?,        !,                            -,      \ ,       {,       },       ^,  KC_ESC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           WIN/CMD,   MO(1),     SPC,     KC_ENT,   MO(2),    RALT
                                       //`--------------------------'  `--------------------------'
@@ -87,11 +87,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_TAB, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, ES_ASTR, KC_LPRN, ES_RPRN, KC_BSPC,
+       KC_TAB, ES_PIPE,   ES_AT, ES_HASH, ES_TILD, ES_EURO,                      ES_NOT, ES_SLSH, ES_LPRN, ES_RPRN,  ES_EQL,  ES_AMPR,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, ES_MORD, ES_FORD, ES_LABK, ES_IQUE, ES_IEXL,                      KC_MINS,  KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS,  KC_GRV,
+      KC_LSFT, ES_MORD, ES_FORD, ES_LABK, ES_IQUE, ES_IEXL,                      ES_PLUS, ES_ASTR, ES_LBRC, ES_RBRC, ES_DQUO, ES_EXLM,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL, ES_BSLS, ES_SLSH, ES_RABK, ES_QUES, ES_EXLM,                      KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
+      KC_LCTL, ES_BSLS, ES_SLSH, ES_RABK, ES_QUES, ES_EXLM,                      ES_MINS, ES_BSLS, ES_LCBR, ES_RCBR, ES_CIRC, KC_ESC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI,   MO(3),  KC_SPC,     KC_ENT, _______, KC_RALT
                                       //`--------------------------'  `--------------------------'
@@ -100,11 +100,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
    /*
    //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-          TAB,       ,        ,        ,        ,        ,                          IMPR,         ,        ,        ,       ,     BSPC,
+          TAB,      | ,       @,       #,       ~,       €,                            ¬,        ,        ,        ,        ,        ,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-         LSFT,       +,       -,       *,       /,       =,                          INS,   START,    REPG,       /,      =,    QUOT,
+         LSFT,        ,        ,        ,        ,        ,                          INS,   START,    REPG,    IMPR,       ,         ,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-         CTRL,       ,        ,       ç,        ,         ,                         SUPR,     END,    AVPG,        ,       ,  KC_ESC,
+         CTRL,        ,        ,       ç,        ,        ,                         SUPR,     END,    AVPG,        ,       ,  KC_ESC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           WIN/CMD,   MO(1),     SPC,     KC_ENT,   MO(2),    RALT
                                       //`--------------------------'  `--------------------------'
@@ -113,11 +113,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [3] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-        RESET, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        RESET, ES_PIPE,   ES_AT, ES_HASH, ES_TILD, ES_EURO,                       ES_NOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      RGB_TOG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      RGB_TOG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                       KC_INS, KC_HOME, KC_PGUP, KC_PSCR, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      RGB_MOD, XXXXXXX, XXXXXXX, ES_CCED, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      RGB_MOD, XXXXXXX, XXXXXXX, ES_CCED, XXXXXXX, XXXXXXX,                       KC_DEL,  KC_END, KC_PGDN, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, KC_RALT
                                       //`--------------------------'  `--------------------------'
